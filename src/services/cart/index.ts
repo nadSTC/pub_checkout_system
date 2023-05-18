@@ -178,7 +178,7 @@ export class Cart {
    * If the item exists in the cart and inventory, the quantity will be decreased.
    * @param {Item["sku"]} sku - The SKU of the item to remove.
    */
-  removeitem = (sku: Item["sku"]) => {
+  removeItem = (sku: Item["sku"]) => {
     const inventoryItem = db.findItemBySku(sku);
 
     if (!inventoryItem) {

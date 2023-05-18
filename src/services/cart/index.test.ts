@@ -42,13 +42,13 @@ describe("Cart class", () => {
 
   it("should remove an item from the cart", () => {
     cart.addItem(mockItem.sku);
-    cart.removeitem(mockItem.sku);
+    cart.removeItem(mockItem.sku);
     const items = cart.getCart();
     expect(items.has(mockItem.sku)).toBe(false);
   });
 
   it("should throw an error when removing an item that is not in the cart", () => {
-    expect(() => cart.removeitem(mockItem.sku)).toThrow();
+    expect(() => cart.removeItem(mockItem.sku)).toThrow();
   });
 
   it("should apply promotions and calculate the total cost correctly", () => {
