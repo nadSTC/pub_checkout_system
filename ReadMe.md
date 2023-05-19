@@ -1,6 +1,22 @@
-# Checkout System
+# Checkout System [BE Only]
 
 A simple checkout system built in TypeScript.
+
+## Testing
+
+You can run the test suite using:
+
+```
+yarn test
+```
+
+If you'd like to add your own test cases in, feel free to add them in the `src/services/cart/index.test.ts` file.
+
+## Logging
+
+All logging done in this demonstration has used the `console` object. Ideally, in a real world application, you would route your logging to a destination such as AWS CloudWatch or Azure Logs.
+
+More specifically, most logs only dump information but that is only useful in isolated scenarios. In a real world application, you would most likely have a profile table and possibly a cart table (to handle a long-lived cart). In all the logs, you would prepend the log item with either the profile or cart ID to help with debugging any issues.
 
 ## Installation
 

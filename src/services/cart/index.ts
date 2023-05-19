@@ -148,6 +148,7 @@ export class Cart {
    * @returns {number} - The total checkout cost after applying promotions.
    */
   checkout = (): number => {
+    console.debug(this.items);
     for (const [sku, cartItem] of this.items.entries()) {
       const promotion = db.findPromotionBySku(cartItem.sku);
       if (!promotion) continue;
